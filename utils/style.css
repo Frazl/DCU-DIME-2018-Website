@@ -31,7 +31,7 @@ ul.topnav li a {
 
 ul.topnav li a:hover:not(.active) {background-color: #111;}
 
-ul.topnav li a.active {background-color: #27aae1;}
+ul.topnav li a.active {background-color: #111;}
 
 ul.topnav li.right {float: right;}
 
@@ -49,32 +49,49 @@ ul.topnav li.right {float: right;}
 }
 
 .nav#home {
-    background: #27aae1;
+        background: #00c6ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+}
+
+#home .fadeIn {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
 }
 
 .nav#services {
-    background: #333;
+    background: #1e3c72;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #2a5298, #1e3c72);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #2a5298, #1e3c72); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+    color: white;    
 }
 
 .nav#contact {
-    background: #333;
+    background: #1e3c72;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #2a5298, #1e3c72);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #2a5298, #1e3c72); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 
 /* ----------------Pricing---------------- */
 .nav#pricing {
-    background: #27aae1;
+    background: #00c6ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 5fr;
@@ -97,11 +114,11 @@ ul.topnav li.right {float: right;}
 
 .price {
     list-style-type: none;
-    /* border: 1px solid #333; */
     margin: 0;
     padding: 0;
     -webkit-transition: 0.3s;
     transition: 0.3s;
+    border-radius: 25px;
 }
 
 .price:hover {
@@ -109,9 +126,10 @@ ul.topnav li.right {float: right;}
 }
 
 .price .header {
-    background-color: #333;
+    background-color: #0b3a42;
     color: white;
     font-size: 25px;
+    border-radius: 10px 10px 0 0;    
 }
 
 .price li {
@@ -120,20 +138,28 @@ ul.topnav li.right {float: right;}
     padding: 20px;
     text-align: center;
 }
-
-.price .grey {
+.price .na {
+    color: grey;
+}
+.price .headerPrice {
     font-size: 20px;
-    font-weight: bold;        
+    font-weight: bold;
+}
+
+.price .containerButton {  
+    border: none; 
+    border-radius: 0 0 10px 10px;    
 }
 
 .button {
-    background-color: #4CAF50;
-    border: none;
+    background-color: #8fd16f;
     color: white;
     padding: 10px 25px;
     text-align: center;
     text-decoration: none;
     font-size: 18px;
+    border-radius: 25px;
+    border: none;
 }
 
 /*---Services---*/
@@ -145,8 +171,8 @@ ul.topnav li.right {float: right;}
 }
 
 /* ---Form--- */
-form{
-    width:40vw;
+.content {
+    width: 50%;
 }
 label{
 	padding: 2rem;
@@ -154,11 +180,45 @@ label{
 }
 input, textarea{
 	padding: 10px;
-	background-color:#D3D3D3;
-	transition: all 2s;
+	background-color:white;
 	width: 100%;
 	margin: auto;
 }
 input:focus, textarea:focus{
-	background-color:#ffffff;
+    border-color: #00c6ff;
+}
+
+/* ANIMATION */
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
 }

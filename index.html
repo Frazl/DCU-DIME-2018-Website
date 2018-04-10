@@ -14,16 +14,11 @@
     <script>
         var i = 0;
         var txt = 'Welcome To ELAIVATOR';
-        var speed = 50;
+        var speed = 100;
         function typeWriter() {
-            if (i < txt.length) {
-                (document).getElementById("writer").innerHTML += txt.charAt(i);
-                i++;
-                setTimeout(typeWriter, speed);
-            }
-            else {
-                (document).getElementById("maininfo").innerHTML = "We are a startup designed to make <strong>elevators smarter</strong> through <strong>machine learning</strong> and <strong>artificial intelligence</strong>"
-            }
+            (document).getElementById("writer").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
         }
     </script>
 </head>
@@ -49,8 +44,12 @@
         <center>
             <h1 id="writer"></h1>
         </center>
-        <img src="img/logo.png" onLoad="typeWriter()" alt="Logo" width="100" height="100">
-        <p id="maininfo"></p>
+        <img class="fadeIn" src="img/logo.png" onLoad="typeWriter()" alt="Logo" width="200" height="200">
+        <p class="fadeIn" id="maininfo">We are a startup designed to make
+            <strong>elevators smarter</strong> through
+            <strong>machine learning</strong> and
+            <strong>artificial intelligence</strong>
+        </p>
     </div>
 
     <div class="nav" id="services">
@@ -77,13 +76,13 @@
         <div class="columns">
             <div class="column">
                 <ul class="price">
-                    <li class="header">Basic</li>
-                    <li class="grey">$ 9.99 / year</li>
-                    <li>10GB Storage</li>
-                    <li>10 Emails</li>
-                    <li>10 Domains</li>
-                    <li>1GB Bandwidth</li>
-                    <li class="grey">
+                    <li class="header">Free</li>
+                    <li class="headerPrice">$ 0 / year</li>
+                    <li>1 elevator</li>
+                    <li class="na">n/a</li>
+                    <li class="na">n/a</li>
+                    <li class="na">n/a</li>
+                    <li class="containerButton">
                         <a href="#" class="button">Sign Up</a>
                     </li>
                 </ul>
@@ -91,13 +90,13 @@
 
             <div class="column">
                 <ul class="price">
-                    <li class="header" style="background-color:#4CAF50">Pro</li>
-                    <li class="grey">$ 24.99 / year</li>
-                    <li>25GB Storage</li>
-                    <li>25 Emails</li>
-                    <li>25 Domains</li>
-                    <li>2GB Bandwidth</li>
-                    <li class="grey">
+                    <li class="header" style="background-color:#8fd16f">Pro</li>
+                    <li class="headerPrice">$ 99.99 / year</li>
+                    <li>10 elevators</li>
+                    <li>API access</li>
+                    <li>Customer service 24/7</li>
+                    <li class="na">n/a</li>
+                    <li class="containerButton">
                         <a href="#" class="button">Sign Up</a>
                     </li>
                 </ul>
@@ -105,13 +104,13 @@
 
             <div class="column">
                 <ul class="price">
-                    <li class="header">Premium</li>
-                    <li class="grey">$ 49.99 / year</li>
-                    <li>50GB Storage</li>
-                    <li>50 Emails</li>
-                    <li>50 Domains</li>
-                    <li>5GB Bandwidth</li>
-                    <li class="grey">
+                    <li class="header">Custom</li>
+                    <li class="headerPrice">Contact us</li>
+                    <li>10+ elevators</li>
+                    <li>API access</li>
+                    <li>Dedicated customer service</li>
+                    <li>Custom analytical platform</li>
+                    <li class="containerButton">
                         <a href="#" class="button">Sign Up</a>
                     </li>
                 </ul>
