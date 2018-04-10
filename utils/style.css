@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: Open Sans,sans-serif;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ----------------TOPNAV---------------- */
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+}
+
+/* ----------------NAV---------------- */
+
+.nav {
+    width: 100vw;
+    height: 100vh;
+    max-width:100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav#home {
+    background: mediumpurple;
+}
+
+.nav#services {
+    background: mediumaquamarine;
+}
+
+.nav#pricing {
+    background: mediumpurple;
+}
+
+.nav#contact {
+    background: mediumaquamarine;
+
+}
+
+/*---Services---*/
+.service{
+    list-style-type: circle;
+    line-height: 2em;
+    font-size: 175%;
+    color: white;
+}
+
+/* ---Form--- */
+form{
+    width:40vw;
+}
+label{
+	padding: 2rem;
+	text-align:left;
+}
+input, textarea{
+	padding: 10px;
+	background-color:#D3D3D3;
+	border-bottom: solid .2rem black;
+	transition: all 2s;
+	width: 100%;
+	margin: auto;
+}
+input:focus, textarea:focus{
+	background-color:#ffffff;
+	border-bottom: solid .1rem green;
+}
