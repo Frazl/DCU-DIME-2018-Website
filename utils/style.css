@@ -136,13 +136,6 @@ ul.topnav li.right {float: right;}
     font-size: 18px;
 }
 
-@media only screen and (max-width: 600px) {
-    .columns {
-        width: 100%;
-    }
-}
-
-
 /*---Services---*/
 .service{
     list-style-type: circle;
