@@ -12,21 +12,22 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="main.js"></script>
     <script>
-    var i = 0;
-    var txt = 'Welcome To ELAIVATOR';
-    var speed = 50;
-    function typeWriter() {
-    if (i < txt.length) {
-        (document).getElementById("writer").innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-    }
-    else{
-     (document).getElementById("maininfo").innerHTML = "We are a startup designed to make <strong>elevators smarter</strong> through <strong>machine learning</strong> and <strong>artificial intelligence</strong>"
-    }
-    }
+        var i = 0;
+        var txt = 'Welcome To ELAIVATOR';
+        var speed = 50;
+        function typeWriter() {
+            if (i < txt.length) {
+                (document).getElementById("writer").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+            else {
+                (document).getElementById("maininfo").innerHTML = "We are a startup designed to make <strong>elevators smarter</strong> through <strong>machine learning</strong> and <strong>artificial intelligence</strong>"
+            }
+        }
     </script>
 </head>
+
 <body>
 
     <ul class="topnav">
@@ -44,9 +45,9 @@
         </li>
     </ul>
 
-    <div class="nav" id="home" >
+    <div class="nav" id="home">
         <center>
-        <h1 id="writer"></h1>
+            <h1 id="writer"></h1>
         </center>
         <img src="img/logo.png" onLoad="typeWriter()" alt="Logo" width="100" height="100">
         <p id="maininfo"></p>
@@ -55,49 +56,58 @@
     <div class="nav" id="services">
         <h1>SERVICES</h1>
         <ul class="service">
-        <li>
-            Integration into existing elevators.
-        </li>
-        <li>
-            Distribution through existing elevator vendors. 
-        </li>
-        <li>
-            Installation of elevators with elaivator.
-        </li>
+            <li>
+                Integration into existing elevators.
+            </li>
+            <li>
+                Distribution through existing elevator vendors.
+            </li>
+            <li>
+                Installation of elevators with elaivator.
+            </li>
         </ul>
     </div>
 
     <div class="nav" id="pricing">
-        <h1>PRICING</h1>
-        <p>Our pricing is scaled to your needs. We provide a full after sales service and provide free support for years after depending on the type of service or product we provide to you.</p>
+        <div class="header">
+            <h1>PRICING</h1>
+            <p>Our pricing is scaled to your needs. We provide a full after sales service and provide free support for years
+                after depending on the type of service or product we provide to you.</p>
+        </div>
+        <div class="columns">
+            <div class="col" id="col1">Free</div>
+            <div class="col" id="col2">Starter</div>
+            <div class="col" id="col3">Premium</div>
+        </div>
     </div>
 
     <div class="nav" id="contact">
         <h1>CONTACT</h1>
-                    <div class="content">
-                    <form action="https://formspree.io/seanfradl@gmail.com" method="post">
-                        <p>
-                            <label for="contact-name">Name:</label>
-							<br>
-                            <input id="contact-name" type="text" name="contact-name" />
-                        </p>
-                        <p>
-                            <label for="contact-email">Email:</label>
-							<br>
-                            <input id="contact-email" type="email" name="_replyto" /> </p>
-                        <p>
-                            <label for="contact-phone">Phone:</label>
-							<br>
-                            <input id="contact-phone" type="tel" name="contact-phone" /> </p>
-                        <p>
-                            <label for="contact-message">Your Message:</label>
-							<br>
-                            <textarea id="contact-message" name="contact-message" rows="5"> </textarea>
-                        </p>
-                        <p>
-                            <input class="button" type="submit" value="Send" /> </p>
-                    </form>
-    </div>
+        <div class="content">
+            <form action="https://formspree.io/seanfradl@gmail.com" method="post">
+                <p>
+                    <label for="contact-name">Name:</label>
+                    <br>
+                    <input id="contact-name" type="text" name="contact-name" />
+                </p>
+                <p>
+                    <label for="contact-email">Email:</label>
+                    <br>
+                    <input id="contact-email" type="email" name="_replyto" /> </p>
+                <p>
+                    <label for="contact-phone">Phone:</label>
+                    <br>
+                    <input id="contact-phone" type="tel" name="contact-phone" /> </p>
+                <p>
+                    <label for="contact-message">Your Message:</label>
+                    <br>
+                    <textarea id="contact-message" name="contact-message" rows="5"> </textarea>
+                </p>
+                <p>
+                    <input class="button" type="submit" value="Send" />
+                </p>
+            </form>
+        </div>
 
 </body>
 
