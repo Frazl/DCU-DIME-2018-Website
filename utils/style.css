@@ -7,10 +7,10 @@ h1{
     font-family: 'Montserrat', sans-serif;
 }
 
-p {
+/* p {
     max-width:60%;
     line-height:1.2em;
-}
+} */
 
 /* ----------------TOPNAV---------------- */
 ul.topnav {
@@ -70,17 +70,6 @@ ul.topnav li.right {float: right;}
     -o-animation: fadein 2s; /* Opera */
 }
 
-.nav#services {
-    background: #1e3c72;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #2a5298, #1e3c72);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #2a5298, #1e3c72); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-    color: white;    
-}
-
 .nav#contact {
     background: #1e3c72;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #2a5298, #1e3c72);  /* Chrome 10-25, Safari 5.1-6 */
@@ -107,14 +96,16 @@ ul.topnav li.right {float: right;}
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+    padding: 5vh;
+    text-align: justify;
 }
 
 #pricing .columns {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1.5fr 2fr 1.5fr;
     grid-template-rows: auto;
     grid-gap:5vh;
-    padding: 5vh;    
+    padding: 0 40vh 0 40vh;    
 }
 
 .price {
@@ -133,7 +124,7 @@ ul.topnav li.right {float: right;}
 .price .header {
     background-color: #0b3a42;
     color: white;
-    font-size: 25px;
+    font-size: 1.2em;
     border-radius: 10px 10px 0 0;    
 }
 
@@ -147,7 +138,7 @@ ul.topnav li.right {float: right;}
     color: grey;
 }
 .price .headerPrice {
-    font-size: 20px;
+    font-size: 1em;
     font-weight: bold;
 }
 
@@ -168,15 +159,55 @@ ul.topnav li.right {float: right;}
 }
 
 /*---Services---*/
-.service{
+.nav#services {
+    background: #1e3c72;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #2a5298, #1e3c72);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #2a5298, #1e3c72); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 3fr;
+    color: white;    
+}
+
+#services .header {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#services .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+}
+
+#services .content .image {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#services .content .text {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5vh;
+    text-align: justify;
+}
+
+#services .header .service {
     list-style-type: circle;
     line-height: 2em;
-    font-size: 175%;
+    font-size: 1.5em;
     color: white;
 }
 
 /* ---Form--- */
-.content {
+#contact .content {
     width: 50%;
 }
 label{
